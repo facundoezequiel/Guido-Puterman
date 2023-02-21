@@ -38,7 +38,7 @@ body {
 // Akkurat Font
 @font-face {
   font-family: "Akkurat";
-  src: url("/fonts/Akkurat/Akkurat-Mono.otf");
+  src: url("/fonts/Akkurat/Akkurat-Mono.woff");
   font-style: normal;
   font-weight: 400;
 }
