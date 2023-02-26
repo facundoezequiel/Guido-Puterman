@@ -10,7 +10,7 @@ const Container = styled.div`
   align-items: flex-start;
   align-content: flex-start;
   user-select: none;
-  background-color: #212121;
+  background-color: #111;
   z-index: 99;
 
   // Marquee Container
@@ -21,10 +21,8 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     align-content: center;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-    position: -webkit-sticky;
-    position: sticky !important;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
     top: 64px;
 
     // Texto
@@ -39,26 +37,28 @@ const Container = styled.div`
 
   // Max Width Container
   #max-width-container {
-    width: 1366px;
+    width: 1440px;
+    padding: 0px 20px 0px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    border-left: 0.5px solid #333;
-    border-right: 0.5px solid #333;
+    border-left: 0.5px solid #222;
+    border-right: 0.5px solid #222;
   }
 
   // Titulo Container
   #titulo-container {
-    width: 50%;
-    height: 444px;
-    padding: 48px;
+    width: calc(50% - 10px);
+    height: 407px;
+    padding: 28px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     overflow: hidden;
-    border-right: 0.5px solid #333;
+    border-left: 0.5px solid #222;
+    border-right: 0.5px solid #222;
 
     div {
       width: 100%;
@@ -77,16 +77,16 @@ const Container = styled.div`
       width: 100%;
       margin: -10px 0px 0px 0px;
       font-family: "Tomato";
-      font-size: 70px;
+      font-size: 60px;
       font-weight: 300;
-      line-height: 90px;
+      line-height: 70px;
       letter-spacing: 1px;
       color: #fff;
       text-align: left;
       text-rendering: geometricPrecision;
 
       img {
-        width: 50px;
+        width: 45px;
         margin: 0px 0px 0px 24px;
         pointer-events: none;
       }
@@ -99,7 +99,7 @@ const Container = styled.div`
       font-weight: 300;
       line-height: 24px;
       letter-spacing: 1px;
-      color: #fff;
+      color: #c3ff00;
       text-align: right;
       text-rendering: geometricPrecision;
     }
@@ -107,17 +107,20 @@ const Container = styled.div`
 
   // Formulario Container
   .formulario-container {
-    width: 50%;
-    padding: 48px;
+    width: calc(50% - 10px);
+    padding: 28px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
+    border-left: 0.5px solid #222;
+    border-right: 0.5px solid #222;
 
     // Loading Container
     #loading-container {
       width: 100%;
-      padding: 48px;
+      height: 351px;
+      padding: 28px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -132,7 +135,8 @@ const Container = styled.div`
     // Mensaje Mostrado
     #mensaje-mostrado {
       width: 100%;
-      padding: 48px;
+      height: 351px;
+      padding: 28px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -169,7 +173,7 @@ const Container = styled.div`
 
       input,
       textarea {
-        width: 46%;
+        width: 47.5%;
         padding: 12px 16px 12px 16px;
         margin: 32px 0px 0px 0px;
         display: flex;
@@ -177,11 +181,11 @@ const Container = styled.div`
         align-items: center;
         align-content: center;
         font-family: "Akkurat";
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 200;
         border-radius: 4px;
-        border: 1px solid #444;
-        background-color: transparent;
+        border: 1px solid #222;
+        background-color: #161616;
         color: #fff;
         text-rendering: geometricPrecision;
         transition: 0.1s all;
@@ -202,17 +206,24 @@ const Container = styled.div`
 
       input:focus,
       textarea:focus {
-        border: 1px solid #999;
+        border: 1px solid #444;
         outline: none;
       }
 
       textarea {
-        min-width: 100%;
-        max-width: 100%;
-        min-height: 120px;
-        max-height: 120px;
+        width: 100%;
+        height: 120px;
+        resize: none;
         margin: 32px 0px 0px 0px;
         text-transform: none;
+      }
+
+      .input-error {
+        border: 1px solid #ff4d00;
+      }
+
+      .input-error:focus {
+        border: 1px solid #ff4d00;
       }
 
       button {
@@ -223,11 +234,11 @@ const Container = styled.div`
         align-items: center;
         align-content: center;
         font-family: "Akkurat";
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 300;
         border-radius: 4px;
-        border: 1px solid #fff;
-        background-color: #fff;
+        border: 1px solid #dbdbdb;
+        background-color: #dbdbdb;
         color: #333;
         letter-spacing: 1px;
         text-rendering: geometricPrecision;
@@ -237,8 +248,8 @@ const Container = styled.div`
 
         // Hover
         :hover {
-          background-color: #212121;
-          color: white;
+          background-color: #111;
+          color: #dbdbdb;
 
           span {
             transform: translate(8px, -6px);
@@ -249,127 +260,23 @@ const Container = styled.div`
         span {
           margin: 3px 0px 0px 6px;
           line-height: normal;
+          font-size: 15px;
           transition: transform 0.2s;
         }
       }
-
-      // Errores Container
-      #errores-container {
-        margin: 32px 0px 0px 0px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        align-content: flex-end;
-
-        p {
-          display: flex;
-          justify-content: flex-end;
-          align-items: flex-start;
-          align-content: flex-start;
-          font-family: "Akkurat";
-          font-size: 11px;
-          font-weight: 300;
-          color: #fe4d00;
-          line-height: 18px;
-          text-rendering: geometricPrecision;
-          text-transform: uppercase;
-        }
-      }
     }
   }
 
-  // 1710px Desktop ------------------------------------------------------------------------------------
-  @media (max-width: ${breakpoints.desktop1710}) {
-    // Max Width Container
-    #max-width-container {
-      width: 1100px;
-    }
-
-    #titulo-container {
-      padding: 40px;
-    }
-
-    // Formulario Container
-    .formulario-container {
-      padding: 40px;
-    }
-  }
-
-  // 1300px Desktop ------------------------------------------------------------------------------------
-  @media (max-width: ${breakpoints.desktop1300}) {
-    // Max Width Container
-    #max-width-container {
-      width: 850px;
-    }
-
-    #titulo-container {
-      width: 282px;
-      padding: 40px;
-
-      h2 {
-        font-size: 55px;
-        line-height: 70px;
-
-        img {
-          width: 40px;
-          margin: 0px 0px 0px 16px;
-        }
-      }
-
-      p {
-        display: none;
-      }
-    }
-
-    // Formulario Container
-    .formulario-container {
-      width: calc(100% - 282px);
-    }
-  }
-
-  // 940px Desktop ------------------------------------------------------------------------------------
-  @media (max-width: ${breakpoints.tablet940}) {
-    // Max Width Container
-    #max-width-container {
-      width: 550px;
-    }
-
-    #titulo-container {
-      display: none;
-    }
-
-    // Formulario Container
-    .formulario-container {
-      width: 100%;
-    }
-
-    form {
-      button {
-        font-size: 11px !important;
-      }
-    }
-  }
-
-  // 600px Mobile ------------------------------------------------------------------------------------
-  @media (max-width: ${breakpoints.mobile600}) {
+  // 1440px Desktop ------------------------------------------------------------------------------------
+  @media (max-width: ${breakpoints.desktop1440}) {
     // Max Width Container
     #max-width-container {
       width: 100%;
-      border: 0px;
     }
   }
 
-  // 500px Mobile ------------------------------------------------------------------------------------
-  @media (max-width: ${breakpoints.mobile500}) {
-    input,
-    textarea {
-      width: 100% !important;
-      margin: 24px 0px 0px 0px !important;
-    }
-
-    input:first-child {
-      margin: 0px 0px 0px 0px !important;
-    }
+  // 850px Tablet ------------------------------------------------------------------------------------
+  @media (max-width: ${breakpoints.tablet850}) {
   }
 `;
 

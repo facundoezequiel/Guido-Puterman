@@ -13,7 +13,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #212121;
+  background-color: #111;
 `;
 
 export default function WorkContainer({ idioma, idiomaEng, idiomaEsp }) {

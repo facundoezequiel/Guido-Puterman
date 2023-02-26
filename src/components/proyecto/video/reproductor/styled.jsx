@@ -8,15 +8,17 @@ const Container = styled.div`
   align-items: center;
   align-content: center;
   overflow: hidden;
-  background-color: #212121;
+  background-color: #111;
 
   #vimeo-player {
     width: 100% !important;
     height: 100% !important;
+    overflow: hidden;
 
     iframe {
       width: 100% !important;
       height: 100% !important;
+      border: 0 !important;
     }
   }
 `;

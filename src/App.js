@@ -55,7 +55,7 @@ function App() {
         {/* Work */}
         <Route
           exact
-          path="/proyecto"
+          path="/vogue"
           element={
             <WorkPage
               idioma={idioma}

@@ -21,39 +21,33 @@ export default function Video({ idioma }) {
       </div>
       {/* Max Width Container */}
       <div id="max-width-container">
-        {/* Fila Dos */}
-        <div id="fila">
-          {/* Video Container */}
+        {/* Video Container */}
+        <div id="video-container">
           <Fade duration={1000} className="fade-container-video">
-            <div id="video-container">
-              <Reproductor></Reproductor>
-            </div>
+            <Reproductor></Reproductor>
           </Fade>
-          {/* Texto Container */}
-          <div id="texto-container">
-            <Fade duration={1000} className="fade-container">
-              <div id="texto-container-textos">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
-                </p>
-                <div id="tags-container">
-                  <p>#production</p>
-                  <p>#editing</p>
-                  <p>#filming</p>
-                </div>
+        </div>
+        {/* Texto Container */}
+        <div id="texto-container">
+          <Fade duration={1000} className="fade-container">
+            <div id="texto-container-textos">
+              <p>
+                Fashion film for Vogue Brasil with the amazing model Adriana
+                Lima shot at Cantagalo, Rio de Janeiro, Brazil.
+              </p>
+              <div id="tags-container">
+                <p>#production</p>
+                <p>#editing</p>
+                <p>#filming</p>
               </div>
-              <button>
-                COPY LINK
-                <span>
-                  <TfiArrowTopRight />
-                </span>
-              </button>
-            </Fade>
-          </div>
+            </div>
+            <button>
+              COPY LINK
+              <span>
+                <TfiArrowTopRight />
+              </span>
+            </button>
+          </Fade>
         </div>
       </div>
     </Container>

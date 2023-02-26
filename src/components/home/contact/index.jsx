@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 import emailjs from "emailjs-com";
 import { Slide, Fade } from "react-awesome-reveal";
 // Icons
-import { TfiArrowTopRight } from "react-icons/tfi";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export default function Contact({ idioma }) {
   // Valor a enviar por correo
@@ -131,7 +131,7 @@ export default function Contact({ idioma }) {
       </div>
       <div id="max-width-container">
         <div id="titulo-container">
-          <Slide direction="left">
+          <Slide direction="left" delay={0}>
             <h2>
               Let's
               <br />
@@ -139,11 +139,11 @@ export default function Contact({ idioma }) {
               <img alt="Chat Emoji" src="/images/emojis/charla.png"></img>
             </h2>
           </Slide>
-          <Slide direction="right">
+          <Slide direction="right" delay={0}>
             <p>GUIDO@PUTERMAN.COM</p>
           </Slide>
         </div>
-        <Fade className="formulario-container" delay={200}>
+        <div className="formulario-container">
           {loading == true ? (
             <div className="opacidad02" id="loading-container">
               <img
@@ -217,23 +217,12 @@ export default function Contact({ idioma }) {
               <button type="submit">
                 ENVIAR
                 <span>
-                  <TfiArrowTopRight />
+                  <FiArrowUpRight />
                 </span>
               </button>
-              <div id="errores-container">
-                <p>{formErrors.nombre}</p>
-                <br></br>
-                <p>{formErrors.apellido}</p>
-                <br></br>
-                <p>{formErrors.telefono}</p>
-                <br></br>
-                <p>{formErrors.correo}</p>
-                <br></br>
-                <p>{formErrors.mensaje}</p>
-              </div>
             </form>
           )}
-        </Fade>
+        </div>
       </div>
     </Container>
   );

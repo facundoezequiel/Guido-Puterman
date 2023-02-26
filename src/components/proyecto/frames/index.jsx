@@ -1,12 +1,10 @@
 import React from "react";
 // Librerias
-import { Slide, Fade } from "react-awesome-reveal";
 import Marquee from "react-fast-marquee";
 // Styled Components
 import Container from "./styled";
 // Components
-import ImageCard from "./image-card";
-import TextCard from "./text-card";
+import Fila from "./fila";
 
 export default function Frames({ idioma }) {
   return (
@@ -20,70 +18,28 @@ export default function Frames({ idioma }) {
       </div>
       {/* Max Width Container */}
       <div id="max-width-container">
-        {/* Frames Container */}
-        <div id="frames-container">
-          {/* ------------------- Fila 1 ------------------- */}
-          <div id="titulo-container">
-            <Slide direction="left">
-              <h2>
-                Best
-                <br />
-                shots
-                <img alt="Chat Emoji" src="/images/emojis/clip.png"></img>
-              </h2>
-            </Slide>
-          </div>
-          {/* Card */}
-          <TextCard vacia={true}></TextCard>
-          {/* Card */}
-          <TextCard vacia={true}></TextCard>
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-          ></ImageCard>
-          {/* ------------------- Fila 2 ------------------- */}
-          {/* Card */}
-          <TextCard vacia={true}></TextCard>
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-          ></ImageCard>
-          {/* Card */}
-          <TextCard vacia={true}></TextCard>
-          {/* Card */}
-          <TextCard vacia={true}></TextCard>
-          {/* ------------------- Fila 3 ------------------- */}
-          {/* Card */}
-          <TextCard vacia={true}></TextCard>
-          {/* Card */}
-          <TextCard vacia={true}></TextCard>
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-          ></ImageCard>
-          <TextCard vacia={true}></TextCard>
-          {/* ------------------- Fila 4 ------------------- */}
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-          ></ImageCard>
-          {/* Card */}
-          <TextCard vacia={true}></TextCard>
-          {/* Card */}
-          <TextCard vacia={true}></TextCard>
-          {/* Card */}
-          <div id="gracias-container">
-            <Slide direction="right">
-              <p>
-                THANKS FOR<br></br>WATCHING!
-              </p>
-              <img alt="Heart Emoji" src="/images/emojis/corazon.png"></img>
-            </Slide>
-          </div>
+        {/* Works Container */}
+        <div id="works-container">
+          <Fila
+            video="/works/zara/principal.mp4"
+            order={3}
+            titulo="00:01:40"
+          ></Fila>
+          <Fila
+            video="/works/kosiuko/principal.mp4"
+            order={1}
+            titulo="00:01:40"
+          ></Fila>
+          <Fila
+            video="/works/levis/principal.mp4"
+            order={4}
+            titulo="00:01:40"
+          ></Fila>
+          <Fila
+            video="/works/rapsodia/principal.mp4"
+            order={2}
+            titulo="00:01:40"
+          ></Fila>
         </div>
       </div>
     </Container>

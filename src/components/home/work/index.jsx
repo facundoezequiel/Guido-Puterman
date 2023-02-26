@@ -4,8 +4,7 @@ import Container from "./styled";
 // Librerias
 import Marquee from "react-fast-marquee";
 // Components
-import ImageCard from "./image-card";
-import TextCard from "./text-card";
+import Fila from "./fila";
 
 export default function Work({ idioma }) {
   return (
@@ -21,176 +20,70 @@ export default function Work({ idioma }) {
       <div id="max-width-container">
         {/* Works Container */}
         <div id="works-container">
-          {/* ------------------- Fila 1 ------------------- */}
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-            fila={1}
-          ></ImageCard>
-          {/* Card */}
-          <TextCard
-            titulo="Invierno 23´"
-            subtitulo="PRODUCTION, FILMING"
-            ano="2022"
+          <Fila
+            video="/works/zara/principal.mp4"
+            order={1}
+            titulo="COLLECTION"
             cliente="ZARA"
-            boton="sobre-mi"
-            fila={1}
-          ></TextCard>
-          {/* Card */}
-          <TextCard vacia={true} fila={1}></TextCard>
-          {/* Card */}
-          <TextCard vacia={true} desktop1300={true} fila={1}></TextCard>
-          {/* ------------------- Fila 2 ------------------- */}
-          {/* Card */}
-          <TextCard vacia={true} desktop1300={true} fila={2}></TextCard>
-          {/* Card */}
-          <TextCard vacia={true} fila={2}></TextCard>
-          {/* Card */}
-          <TextCard
-            titulo="Invierno 23´"
-            subtitulo="PRODUCTION, FILMING"
-            ano="2022"
-            cliente="ZARA"
-            boton="sobre-mi"
-            align="derecha"
-            fila={2}
-          ></TextCard>
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-            fila={2}
-          ></ImageCard>
-          {/* ------------------- Fila 3 ------------------- */}
-          {/* Card */}
-          <TextCard vacia={true} desktop1300={true} fila={3}></TextCard>
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-            fila={3}
-          ></ImageCard>
-          {/* Card */}
-          <TextCard
-            titulo="Invierno 23´"
-            subtitulo="PRODUCTION, FILMING"
-            ano="2022"
-            cliente="ZARA"
-            boton="sobre-mi"
-            fila={3}
-          ></TextCard>
-          {/* Card */}
-          <TextCard vacia={true} fila={3}></TextCard>
-          {/* ------------------- Fila 4 ------------------- */}
-          {/* Card */}
-          <TextCard vacia={true} desktop1300={true} fila={4}></TextCard>
-          {/* Card */}
-          <TextCard vacia={true} fila={4}></TextCard>
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/auto.jpg"
-            alt="Prueba imagen"
-            fila={4}
-          ></ImageCard>
-          {/* Card */}
-          <TextCard
-            titulo="Auto"
-            subtitulo="PRODUCTION, FILMING"
-            ano="2022"
-            cliente="ZARA"
-            boton="sobre-mi"
-            fila={4}
-          ></TextCard>
-          {/* ------------------- Fila 5 ------------------- */}
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-            fila={5}
-          ></ImageCard>
-          {/* Card */}
-          <TextCard
-            titulo="Invierno 23´"
-            subtitulo="PRODUCTION, FILMING"
-            ano="2022"
-            cliente="ZARA"
-            boton="sobre-mi"
-            fila={5}
-          ></TextCard>
-          {/* Card */}
-          <TextCard vacia={true} desktop1300={true} fila={5}></TextCard>
-          {/* Card */}
-          <TextCard vacia={true} fila={5}></TextCard>
-          {/* ------------------- Fila 6 ------------------- */}
-          {/* Card */}
-          <TextCard vacia={true} desktop1300={true} fila={6}></TextCard>
-          {/* Card */}
-          <TextCard vacia={true} fila={6}></TextCard>
-          {/* Card */}
-          <TextCard
-            titulo="Invierno 23´"
-            subtitulo="PRODUCTION, FILMING"
-            ano="2022"
-            cliente="ZARA"
-            boton="sobre-mi"
-            align="derecha"
-            fila={6}
-          ></TextCard>
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-            fila={6}
-          ></ImageCard>
-          {/* ------------------- Fila 7 ------------------- */}
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-            fila={7}
-          ></ImageCard>
-          {/* Card */}
-          <TextCard
-            titulo="Invierno 23´"
-            subtitulo="PRODUCTION, FILMING"
-            ano="2022"
-            cliente="ZARA"
-            boton="sobre-mi"
-            fila={7}
-          ></TextCard>
-          {/* Card */}
-          <TextCard vacia={true} desktop1300={true} fila={7}></TextCard>
-          {/* Card */}
-          <TextCard vacia={true} fila={7}></TextCard>
-          {/* ------------------- Fila 8 ------------------- */}
-          {/* Card */}
-          <TextCard vacia={true} ultima={true} fila={8}></TextCard>
-          {/* Card */}
-          <TextCard
-            titulo="Invierno 23´"
-            subtitulo="PRODUCTION, FILMING"
-            ano="2022"
-            cliente="ZARA"
-            boton="sobre-mi"
-            align="derecha"
-            ultima={true}
-            fila={8}
-          ></TextCard>
-          {/* Card */}
-          <ImageCard
-            imagen="/images/works/zara.jpg"
-            alt="Prueba imagen"
-            ultima={true}
-            fila={8}
-          ></ImageCard>
-          {/* Card */}
-          <TextCard
-            vacia={true}
-            ultima={true}
-            desktop1300={true}
-            fila={8}
-          ></TextCard>
+            fecha="2023"
+            link="/vogue"
+          ></Fila>
+          <Fila
+            video="/works/kosiuko/principal.mp4"
+            order={4}
+            titulo="COLLECTION"
+            cliente="KOSIUKO"
+            fecha="2022"
+            link="/vogue"
+          ></Fila>
+          <Fila
+            video="/works/levis/principal.mp4"
+            order={2}
+            titulo="COLLECTION"
+            cliente="LEVIS"
+            fecha="2021"
+            link="/vogue"
+          ></Fila>
+          <Fila
+            video="/works/rapsodia/principal.mp4"
+            order={3}
+            titulo="COLLECTION"
+            cliente="RAPSODIA"
+            fecha="2022"
+            link="/vogue"
+          ></Fila>
+          <Fila
+            video="/works/unitivo/principal.mp4"
+            order={1}
+            titulo="COLLECTION"
+            cliente="UNITIVO"
+            fecha="2023"
+            link="/vogue"
+          ></Fila>
+          <Fila
+            video="/works/kosiuko/principal.mp4"
+            order={4}
+            titulo="COLLECTION"
+            cliente="KOSIUKO"
+            fecha="2022"
+            link="/vogue"
+          ></Fila>
+          <Fila
+            video="/works/levis/principal.mp4"
+            order={2}
+            titulo="COLLECTION"
+            cliente="LEVIS"
+            fecha="2021"
+            link="/vogue"
+          ></Fila>
+          <Fila
+            video="/works/rapsodia/principal.mp4"
+            order={3}
+            titulo="COLLECTION"
+            cliente="RAPSODIA"
+            fecha="2022"
+            link="/vogue"
+          ></Fila>
         </div>
       </div>
     </Container>

@@ -8,17 +8,16 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: ${(props) => (props.tema == "oscuro" ? "#212121" : "#fff")};
+  background: rgba(17, 17, 17, 0.65);
+  backdrop-filter: saturate(180%) blur(10px);
   position: fixed;
   top: 0;
   left: 0;
-  border-bottom: ${(props) =>
-    props.tema == "oscuro" ? "1px solid #333" : "1px solid #e1e1e1"};
   z-index: 100;
 
   // Max Width Container
   #max-width-container {
-    width: 1366px;
+    width: 1344px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,7 +42,7 @@ const Container = styled.div`
       font-size: 29px;
       font-weight: 600;
       text-align: center;
-      color: ${(props) => (props.tema != "oscuro" ? "#212121" : "#fff")};
+      color: #fff;
       cursor: pointer;
       text-decoration: none;
     }
@@ -63,6 +62,46 @@ const Container = styled.div`
     align-content: center;
   }
 
+  // Nav Container
+  #nav-container {
+    width: auto;
+    margin: 0px 56px 0px 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+
+    li {
+      width: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      align-content: center;
+
+      a {
+        margin: 0px 0px 0px 24px;
+        font-family: "Akkurat";
+        color: #dbdbdb;
+        font-size: 12px;
+        font-weight: 300;
+        transition: 0.2s all;
+        letter-spacing: 1px;
+        text-decoration: none;
+        transition: 0.2s all;
+        cursor: pointer;
+      }
+
+      a:hover {
+        background-color: #444;
+      }
+
+      .boton-seleccionado {
+        color: #c3ff00;
+      }
+    }
+  }
+
   // Redes Container
   #redes-container {
     width: auto;
@@ -74,7 +113,7 @@ const Container = styled.div`
 
     // Botones
     a {
-      color: ${(props) => (props.tema != "oscuro" ? "#212121" : "#fff")};
+      color: #dbdbdb;
       font-size: 18px;
       line-height: 12px;
       margin: 0px 0px 0px 8px;
@@ -94,9 +133,9 @@ const Container = styled.div`
     // Botones
     a {
       font-family: "Akkurat";
-      color: ${(props) => (props.tema != "oscuro" ? "#212121" : "#fff")};
-      font-size: 13px;
-      font-weight: 500;
+      color: #dbdbdb;
+      font-size: 12px;
+      font-weight: 300;
       margin: 0px 0px 0px 8px;
       transition: 0.2s all;
       letter-spacing: 1px;
@@ -111,39 +150,22 @@ const Container = styled.div`
   }
 
   .idioma-seleccionado {
-    color: #ff4d00 !important;
+    color: #c3ff00 !important;
   }
 
-  // 1710px Desktop ------------------------------------------------------------------------------------
-  @media (max-width: ${breakpoints.desktop1710}) {
+  // 1440px Desktop ------------------------------------------------------------------------------------
+  @media (max-width: ${breakpoints.desktop1440}) {
     // Max Width Container
     #max-width-container {
-      width: 1100px;
+      width: calc(100% - 48px - 48px);
     }
   }
 
-  // 1300px Desktop ------------------------------------------------------------------------------------
-  @media (max-width: ${breakpoints.desktop1300}) {
-    // Max Width Container
-    #max-width-container {
-      width: 850px;
-    }
-  }
-
-  // 940px Desktop ------------------------------------------------------------------------------------
-  @media (max-width: ${breakpoints.tablet940}) {
-    // Max Width Container
-    #max-width-container {
-      width: 550px;
-    }
-  }
-
-  // 600px Mobile ------------------------------------------------------------------------------------
-  @media (max-width: ${breakpoints.mobile600}) {
-    // Max Width Container
-    #max-width-container {
-      width: 100%;
-      padding: 0px 40px 0px 40px;
+  // 720px Tablet ------------------------------------------------------------------------------------
+  @media (max-width: ${breakpoints.tablet720}) {
+    // Redes Idioma Container
+    #redes-idioma-container {
+      display: none;
     }
   }
 `;

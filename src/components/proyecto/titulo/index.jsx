@@ -1,4 +1,8 @@
 import React from "react";
+// Componentes
+import { Link } from "react-router-dom";
+// Íconos
+import { BsArrowLeft } from "react-icons/bs";
 // Styled Components
 import Container from "./styled";
 
@@ -9,14 +13,20 @@ export default function Titulo({ idioma }) {
       <div id="max-width-container">
         {/* Titulo Container */}
         <div>
-          <h1>Invierno 23'</h1>
+          <Link to="/" className="opacidad02">
+            <span>
+              <BsArrowLeft />
+            </span>
+            PROJECTS
+          </Link>
+          <h1 className="opacidad02">Adriana Lima</h1>
         </div>
         {/* Texto Container */}
         <div>
-          <p>
-            <span>YEAR:</span> 2022
+          <p className="opacidad02">
+            <span>YEAR:</span> 2019
             <br />
-            <span>CLIENT:</span> ZARA
+            <span>CLIENT:</span> VOGUE
           </p>
         </div>
       </div>

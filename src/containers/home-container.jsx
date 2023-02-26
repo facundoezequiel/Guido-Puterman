@@ -13,7 +13,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #212121;
+  background-color: #111;
 `;
 
 export default function HomeContainer({ idioma, idiomaEng, idiomaEsp }) {
@@ -23,13 +23,14 @@ export default function HomeContainer({ idioma, idiomaEng, idiomaEsp }) {
         idioma={idioma}
         idiomaEng={idiomaEng}
         idiomaEsp={idiomaEsp}
+        pagina="projects"
       ></Header>
       <Presentation
         idioma={idioma}
         idiomaEng={idiomaEng}
         idiomaEsp={idiomaEsp}
       ></Presentation>
-      <Work idioma={idioma} idiomaEng={idiomaEng} idiomaEsp={idiomaEsp}></Work>
+      <Work></Work>
       <Contact
         idioma={idioma}
         idiomaEng={idiomaEng}

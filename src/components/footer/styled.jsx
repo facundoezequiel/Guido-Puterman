@@ -7,20 +7,45 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #212121;
-  border-top: 1px solid #333;
+  background-color: #111;
+  border-top: 1px solid #222;
   z-index: 100;
+  position: relative;
+
+  ::after {
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+    content: "";
+    left: 0;
+    contain: strict;
+    right: 0;
+    height: 1px;
+    background-color: #222;
+  }
 
   // Max Width Container
   #max-width-container {
-    width: 1366px;
-    padding: 24px 48px 24px 48px;
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-left: 0.5px solid #222;
+    border-right: 0.5px solid #222;
+  }
+
+  // Logo Texto Container
+  #logo-texto-container {
+    width: 1400px;
+    padding: 44px 28px 24px 28px;
+    margin: 0px 20px 0px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    border-right: 1px solid #333;
-    border-left: 1px solid #333;
+    border-left: 0.5px solid #222;
+    border-right: 0.5px solid #222;
   }
 
   // Logo Container
