@@ -24,7 +24,12 @@ export default function Video({ idioma }) {
         {/* Video Container */}
         <div id="video-container">
           <Fade duration={1000} className="fade-container-video">
-            <Reproductor></Reproductor>
+            <Reproductor
+              titulo="TIERRA"
+              cliente="VOGUE"
+              poster="./works/tierra/principal.png"
+              video="https://vimeo.com/215447937?transparent=0"
+            ></Reproductor>
           </Fade>
         </div>
         {/* Texto Container */}
